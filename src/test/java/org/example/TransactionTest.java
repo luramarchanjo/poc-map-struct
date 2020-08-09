@@ -22,8 +22,7 @@ public class TransactionTest extends TestCase {
                 .ips(Collections.singletonList("127.0.0.1, 192.168.0.1, 0.0.0.0"))
                 .build();
 
-        TransactionMapper transactionMapper = TransactionMapper.INSTANCE;
-
+        TransactionMapperImpl transactionMapper = new TransactionMapperImpl();
         Transaction transaction = transactionMapper.requestToTransaction(request);
 
         Assert.assertEquals(transaction.getType(), request.getType());

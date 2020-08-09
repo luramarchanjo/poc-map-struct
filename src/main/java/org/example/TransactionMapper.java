@@ -2,12 +2,9 @@ package org.example;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface TransactionMapper {
-
-    TransactionMapper INSTANCE = Mappers.getMapper(TransactionMapper.class);
 
     // FIXME testar com map
     // FIXME testar com data e diferente formato
