@@ -11,9 +11,7 @@ public interface TransactionMapper {
 
     TransactionMapper INSTANCE = Mappers.getMapper(TransactionMapper.class);
 
-    // FIXME testar com lista
     // FIXME testar com map
-    // FIXME testar com data
     // FIXME testar com data e diferente formato
 
     @BeforeMapping

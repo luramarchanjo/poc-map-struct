@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Collection;
 
 @Data
 @Builder
@@ -25,5 +26,7 @@ public class CreateTransactionRequest {
     private BigDecimal amount;
 
     private LocalDateTime date;
+
+    private Collection<String> ips;
 
 }
