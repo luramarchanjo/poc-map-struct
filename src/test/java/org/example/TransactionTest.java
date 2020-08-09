@@ -28,7 +28,7 @@ public class TransactionTest extends TestCase {
         assertEquals(transaction.getCard(), request.getCardNumber());
         assertEquals(transaction.getTerminalId(), request.getTerminal());
         assertEquals(transaction.getMerchantId(), request.getMerchant());
-        assertEquals(transaction.getAmount(), Double.valueOf(request.getAmount().doubleValue()));
+        assertEquals(transaction.getAmount(), request.getAmount().doubleValue());
         assertEquals(transaction.getMerchantDate(), request.getDate());
         assertEquals(transaction.getIps(), request.getIps());
         assertNotNull(transaction.getSystemDate());
