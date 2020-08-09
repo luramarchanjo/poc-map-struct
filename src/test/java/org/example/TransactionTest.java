@@ -1,7 +1,6 @@
 package org.example;
 
 import junit.framework.TestCase;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -25,15 +24,15 @@ public class TransactionTest extends TestCase {
         TransactionMapper transactionMapper = new TransactionMapperImpl();
         Transaction transaction = transactionMapper.requestToTransaction(request);
 
-        Assert.assertEquals(transaction.getType(), request.getType());
-        Assert.assertEquals(transaction.getCard(), request.getCardNumber());
-        Assert.assertEquals(transaction.getTerminalId(), request.getTerminal());
-        Assert.assertEquals(transaction.getMerchantId(), request.getMerchant());
-        Assert.assertEquals(transaction.getAmount(), Double.valueOf(request.getAmount().doubleValue()));
-        Assert.assertEquals(transaction.getMerchantDate(), request.getDate());
-        Assert.assertEquals(transaction.getIps(), request.getIps());
-        Assert.assertNotNull(transaction.getSystemDate());
-        Assert.assertNotNull(transaction.getId());
+        assertEquals(transaction.getType(), request.getType());
+        assertEquals(transaction.getCard(), request.getCardNumber());
+        assertEquals(transaction.getTerminalId(), request.getTerminal());
+        assertEquals(transaction.getMerchantId(), request.getMerchant());
+        assertEquals(transaction.getAmount(), Double.valueOf(request.getAmount().doubleValue()));
+        assertEquals(transaction.getMerchantDate(), request.getDate());
+        assertEquals(transaction.getIps(), request.getIps());
+        assertNotNull(transaction.getSystemDate());
+        assertNotNull(transaction.getId());
     }
 
 }
