@@ -1,9 +1,7 @@
 package org.example;
 
-import org.mapstruct.BeforeMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
@@ -13,11 +11,7 @@ public interface TransactionMapper {
 
     // FIXME testar com map
     // FIXME testar com data e diferente formato
-
-    @BeforeMapping
-    default void beforeMapping(CreateTransactionRequest request, @MappingTarget Transaction transaction) {
-        transaction.setType(request.getType());
-    }
+    // FIXME Update README.md
 
     @Mapping(source = "cardNumber", target = "card")
     @Mapping(source = "terminal", target = "terminalId")
