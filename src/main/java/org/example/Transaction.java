@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.UUID;
@@ -27,7 +26,7 @@ public class Transaction {
 
     private String merchantId;
 
-    private BigDecimal amount;
+    private Double amount;
 
     private LocalDateTime merchantDate;
 

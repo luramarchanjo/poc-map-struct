@@ -13,8 +13,6 @@ public interface TransactionMapper {
 
     // FIXME testar com lista
     // FIXME testar com map
-    // FIXME testar com tipo diferente
-    // FIXME testar com mesmo tipo
     // FIXME testar com data
     // FIXME testar com data e diferente formato
 
