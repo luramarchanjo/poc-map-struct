@@ -19,6 +19,8 @@ public class Transaction {
     @Builder.Default
     private UUID id = UUID.randomUUID();
 
+    private TransactionType type;
+
     private String card;
 
     private String terminalId;

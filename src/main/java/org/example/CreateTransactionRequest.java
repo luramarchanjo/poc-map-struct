@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class CreateTransactionRequest {
 
+    private TransactionType type;
+
     private String cardNumber;
 
     private String terminal;

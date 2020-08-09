@@ -12,6 +12,7 @@ public class TransactionTest extends TestCase {
     @Test
     public void testMapper() {
         CreateTransactionRequest request = CreateTransactionRequest.builder()
+                .type(TransactionType.PURCHASE)
                 .cardNumber("9999 8888 7777 6666")
                 .terminal("POS-000001")
                 .merchant("MACDONALDS-0000001")
@@ -23,6 +24,7 @@ public class TransactionTest extends TestCase {
 
         Transaction transaction = transactionMapper.requestToTransaction(request);
 
+        Assert.assertEquals(transaction.getType(), request.getType());
         Assert.assertEquals(transaction.getCard(), request.getCardNumber());
         Assert.assertEquals(transaction.getTerminalId(), request.getTerminal());
         Assert.assertEquals(transaction.getMerchantId(), request.getMerchant());
