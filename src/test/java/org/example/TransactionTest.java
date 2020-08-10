@@ -5,7 +5,8 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 public class TransactionTest extends TestCase {
 
@@ -18,7 +19,8 @@ public class TransactionTest extends TestCase {
                 .merchant("MACDONALDS-0000001")
                 .amount(BigDecimal.valueOf(55.43))
                 .date(LocalDateTime.of(2020, 8, 9, 9, 45))
-                .ips(Collections.singletonList("127.0.0.1, 192.168.0.1, 0.0.0.0"))
+                .ips(List.of("127.0.0.1, 192.168.0.1, 0.0.0.0"))
+                .headers(Map.of("content-type", "application/json"))
                 .build();
 
         TransactionMapper transactionMapper = new TransactionMapperImpl();
@@ -31,6 +33,7 @@ public class TransactionTest extends TestCase {
         assertEquals(transaction.getAmount(), request.getAmount().doubleValue());
         assertEquals(transaction.getMerchantDate(), request.getDate());
         assertEquals(transaction.getIps(), request.getIps());
+        assertEquals(transaction.getHeaders(), request.getHeaders());
         assertNotNull(transaction.getSystemDate());
         assertNotNull(transaction.getId());
     }

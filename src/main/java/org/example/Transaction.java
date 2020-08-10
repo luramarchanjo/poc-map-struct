@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Collection;
+import java.util.Map;
 import java.util.UUID;
 
 @Data
@@ -35,5 +36,7 @@ public class Transaction {
     private LocalDateTime systemDate = LocalDateTime.now(ZoneId.of("UTC"));
 
     private Collection<String> ips;
+
+    private Map<String, String> headers;
 
 }

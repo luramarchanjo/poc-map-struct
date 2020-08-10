@@ -6,10 +6,6 @@ import org.mapstruct.Mapping;
 @Mapper
 public interface TransactionMapper {
 
-    // FIXME testar com map
-    // FIXME testar com data e diferente formato
-    // FIXME Update README.md
-
     @Mapping(source = "cardNumber", target = "card")
     @Mapping(source = "terminal", target = "terminalId")
     @Mapping(source = "merchant", target = "merchantId")

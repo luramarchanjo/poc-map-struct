@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Map;
 
 @Data
 @Builder
@@ -28,5 +29,7 @@ public class CreateTransactionRequest {
     private LocalDateTime date;
 
     private Collection<String> ips;
+
+    private Map<String, String> headers;
 
 }
